@@ -91,7 +91,7 @@ function factoral2(number) {
 
 console.log("Factorial (Recursion)", factoral2(10));
 
-// Generate Parentheses using Recursion
+// Generate Parentheses using Recursion (LeetCode)
 
 const generateParenthesis = function (n) {
   let result = [];
@@ -111,7 +111,7 @@ const generateParenthesis = function (n) {
   return result;
 };
 
-// Letter Combinations of a Phone Number
+// Letter Combinations of a Phone Number (LeetCode)
 
 const letterCombinations = function (digits) {
   if (!digits) {
@@ -141,5 +141,34 @@ const letterCombinations = function (digits) {
     }
   }
   backtrack(0, "");
+  return result;
+};
+
+// Combination Sum (LeetCode)
+
+const combinationSum = function (candidates, target) {
+  let result = [];
+
+  function backtrack(start, current, total) {
+    if (total === target) {
+      result.push([...current]);
+      return;
+    }
+
+    if (total > target) {
+      return;
+    }
+
+    for (let i = start; i < candidates.length; i++) {
+      current.push(candidates[i]);
+
+      backtrack(i, current, total + candidates[i]);
+
+      current.pop();
+    }
+  }
+
+  backtrack(0, [], 0);
+
   return result;
 };
