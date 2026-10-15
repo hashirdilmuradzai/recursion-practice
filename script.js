@@ -111,6 +111,8 @@ const generateParenthesis = function (n) {
   return result;
 };
 
+console.log("Generate Parentheses", generateParenthesis(5));
+
 // Letter Combinations of a Phone Number (LeetCode)
 
 const letterCombinations = function (digits) {
@@ -144,6 +146,8 @@ const letterCombinations = function (digits) {
   return result;
 };
 
+// console.log("Letter Combinations of a Phone Number", letterCombinations(23));
+
 // Combination Sum (LeetCode)
 
 const combinationSum = function (candidates, target) {
@@ -172,3 +176,5 @@ const combinationSum = function (candidates, target) {
 
   return result;
 };
+
+console.log("Combination Sum", combinationSum([2, 4, 6, 7, 3, 4], 79));
